@@ -1,16 +1,8 @@
-# design-patterns-in-es6
-
-Let's start with the commonly used patterns.
-
-# Factory
-The factory pattern is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time..
-
-```
 const Country = {
     Chinese: 'Chinese',
     UnitedStates: 'UnitedStates',
     UK: 'UK',
-    Greece: 'Greece',
+    Euro: 'Euro',
 }
 
 class CurrencyDescribing {
@@ -65,20 +57,16 @@ class CurrencyFactory {
             case Country.UnitedStates: {
                 return new UnitedStatesDolar();
             }
-            case Country.Chese: {
-                return new UnitedStatesDolar();
+            case Country.Euro: {
+                return new Euro();
             }
             case Country.UK: {
                 return new UK();
             }
-        
             default:
                 throw new Error("There is no factory type");
-                break;
         }
     }
 }
-```
 
-# Abstract Factory
-The abstract factory pattern is used to provide a client with a set of related or dependant objects. The "family" of objects created by the factory are determined at run-time.
+export default CurrencyFactory;
