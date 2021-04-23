@@ -10,10 +10,14 @@ class CurrencyDescribing {
         this.symbol = symbol;
         this.code = code;
     }
+
+    description() {
+        console.log(`My code is${0}, and symbol is ${1}`, this.code, this.symbol);
+    }
 }
 
 class ChineseRMB extends CurrencyDescribing {
-    constructor(){
+    constructor() {
         super({
             symbol: '¥',
             code: 'CNY',
@@ -22,7 +26,7 @@ class ChineseRMB extends CurrencyDescribing {
 }
 
 class UnitedStatesDolar extends CurrencyDescribing {
-    constructor(){
+    constructor() {
         super({
             symbol: '$',
             code: 'USD',
@@ -31,7 +35,7 @@ class UnitedStatesDolar extends CurrencyDescribing {
 }
 
 class Euro extends CurrencyDescribing {
-    constructor(){
+    constructor() {
         super({
             symbol: '€',
             code: 'EUR',
@@ -40,7 +44,7 @@ class Euro extends CurrencyDescribing {
 }
 
 class UK extends CurrencyDescribing {
-    constructor(){
+    constructor() {
         super({
             symbol: '£',
             code: 'GBP',
@@ -49,7 +53,7 @@ class UK extends CurrencyDescribing {
 }
 
 class CurrencyFactory {
-    static currency(country){
+    static currency(country) {
         switch (country) {
             case Country.Chinese: {
                 return new ChineseRMB();
