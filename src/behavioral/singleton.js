@@ -1,3 +1,10 @@
+class ClientA {
+    takeElevator(){
+        const elevator = new SingletonElevator().init();
+        elevator.call();
+    }
+}
+
 class SingletonElevator {
     static shared;
     // Keep one instance when each call;
@@ -11,6 +18,8 @@ class SingletonElevator {
 }
 
 class Elevator {
+    call(){}
+
     openDoor() { };
     closeDoor() { };
     //...//

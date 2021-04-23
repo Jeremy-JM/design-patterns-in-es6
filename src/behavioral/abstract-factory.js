@@ -1,5 +1,5 @@
 class Worker {
-    structCar(){
+    structCar() {
         let iPhone = new AppleFactory();
         iPhone.power();
         iPhone.playGame();
@@ -32,23 +32,23 @@ class MobileFactory {
         this.screen = new Screen();
     }
 
-    createBoard(){
+    createBoard() {
         throw new Error("Method should override");
     }
 
-    createScreen(){
+    createScreen() {
         throw new Error("Method should override");
     }
 
-    createBettary(){
+    createBettary() {
         throw new Error("Method should override");
     }
 
-    power(){
+    power() {
         this.board.powerSwitch();
     }
 
-    playGame(){
+    playGame() {
 
     }
 }
@@ -56,7 +56,7 @@ class MobileFactory {
 // -- Board --
 
 class RedmiBoard extends board {
-    constructor(){
+    constructor() {
         this.chip = "Qualcomm Snapdragon 888";
         this.osType = "Andriod 11";
         this.name = "Redmi master board";
@@ -64,10 +64,10 @@ class RedmiBoard extends board {
 }
 
 class AppleBoard extends board {
-    constructor(chip, osType, name, powerOn){
+    constructor(chip, osType, name, powerOn) {
         this.chip = "Apple A14";
         this.osType = "iOS 14.5",
-        this.name = "iPhone XS Max master board";
+            this.name = "iPhone XS Max master board";
     }
 }
 
@@ -82,7 +82,7 @@ class Board {
         this.powerOn = !this.powerOn;
     }
     description() {
-        console.log(`I'm ${0}board, using ${1} for ${2}, now power is ${3}`, this.name, this.chip, this.osType, this.powerOn ? "on" : "off");
+        console.log(`I'm ${this.name}board, using ${this.chip} for ${this.osType}, now power is ${this.powerOn ? "on" : "off"}`);
     }
 }
 
@@ -93,7 +93,7 @@ class LGBettery extends Battery {
         this.batteryCapacity = 2000;
     }
     description() {
-        console.log(`Support ${0}Mah power`, this.batteryCapacity);
+        console.log(`Support ${this.batteryCapacity}Mah power`,);
     }
 }
 
@@ -102,7 +102,7 @@ class SamsungBettery extends Battery {
         this.batteryCapacity = 5000;
     }
     description() {
-        console.log(`Support ${0}Mah power`, this.batteryCapacity);
+        console.log(`Support ${this.batteryCapacity}Mah power`);
     }
 }
 
@@ -137,7 +137,7 @@ class Screen {
         this.size = null;
     }
     description() {
-        console.log(`I'm ${0}, size:${1}`, this.typeName, this.size);
+        console.log(`I'm ${this.typeName}, size:${this.size}`);
     }
     display() {
         throw new Error('Method should implement')
