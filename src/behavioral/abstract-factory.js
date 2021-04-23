@@ -6,7 +6,7 @@ class Worker {
     }
 }
 
-/** Factory */
+/** Abstract Factory different with factory is a patch of interface added. */
 class RedmiFactory extends MobileFactory {
     constructor() {
         this.display = new TFTLED();

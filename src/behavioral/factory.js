@@ -12,7 +12,7 @@ class CurrencyDescribing {
     }
 
     description() {
-        console.log(`My code is${0}, and symbol is ${1}`, this.code, this.symbol);
+        console.log(`My code is${this.code}, and symbol is ${this.symbol}`);
     }
 }
 
@@ -26,7 +26,7 @@ class ChineseRMB extends CurrencyDescribing {
 }
 
 class UnitedStatesDolar extends CurrencyDescribing {
-    constructor() {
+    constructor(){
         super({
             symbol: '$',
             code: 'USD',
@@ -34,23 +34,6 @@ class UnitedStatesDolar extends CurrencyDescribing {
     }
 }
 
-class Euro extends CurrencyDescribing {
-    constructor() {
-        super({
-            symbol: '€',
-            code: 'EUR',
-        });
-    }
-}
-
-class UK extends CurrencyDescribing {
-    constructor() {
-        super({
-            symbol: '£',
-            code: 'GBP',
-        })
-    }
-}
 
 class CurrencyFactory {
     static currency(country) {
@@ -60,12 +43,6 @@ class CurrencyFactory {
             }
             case Country.UnitedStates: {
                 return new UnitedStatesDolar();
-            }
-            case Country.Euro: {
-                return new Euro();
-            }
-            case Country.UK: {
-                return new UK();
             }
             default:
                 throw new Error("There is no factory type");

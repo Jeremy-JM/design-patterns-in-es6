@@ -38,24 +38,6 @@ class UnitedStatesDolar extends CurrencyDescribing {
     }
 }
 
-class Euro extends CurrencyDescribing {
-    constructor(){
-        super({
-            symbol: '€',
-            code: 'EUR',
-        });
-    }
-}
-
-class UK extends CurrencyDescribing {
-    constructor(){
-        super({
-            symbol: '£',
-            code: 'GBP',
-        })
-    }
-}
-
 class CurrencyFactory {
     static currency(country){
         switch (country) {
@@ -65,13 +47,6 @@ class CurrencyFactory {
             case Country.UnitedStates: {
                 return new UnitedStatesDolar();
             }
-            case Country.Chese: {
-                return new UnitedStatesDolar();
-            }
-            case Country.UK: {
-                return new UK();
-            }
-        
             default:
                 throw new Error("There is no factory type");
                 break;
