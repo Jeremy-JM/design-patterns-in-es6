@@ -1,7 +1,7 @@
 # design-patterns-in-es6
 
 我们从最常用的设计模式开始吧
-
+[English version](https://github.com/Jeremy-JM/design-patterns-in-es6)
 # Factory
 工厂模式用于替换类构造函数，抽象对象生成过程，以便于可以运行时确定实例化的对象类型。
 
