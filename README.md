@@ -2,7 +2,7 @@
 
 Let's start with the mostly used patterns.
 
-## [简体中文](https://github.com/Jeremy-JM/design-patterns-in-es6/blob/master/readme.cn.md)
+## [简体中文](https://github.com/Jeremy-JM/design-patterns-in-es6/blob/master/doc/readme.cn.md)
 
 # Factory
 
