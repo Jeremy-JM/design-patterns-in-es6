@@ -1,12 +1,9 @@
 # design-patterns-in-es6
 
-Let's start with the commonly used patterns.
-
-![简体中文](/readme.cn.md)
-
+我们从最常用的设计模式开始吧
 
 # Factory
-The factory pattern is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time..
+工厂模式用于替换类构造函数，抽象对象生成过程，以便于可以运行时确定实例化的对象类型。
 
 ```ES6
 const Country = {
@@ -59,7 +56,7 @@ class CurrencyFactory {
 ```
 
 # Abstract Factory
-The abstract factory pattern is used to provide a client with a set of related or dependant objects. The "family" of objects created by the factory are determined at run-time.
+抽象工厂模式用于向客户端提供一组相关或依赖的对象。与工场模的区别是，抽象工厂有一系列的“族”对象是在运行时确定的。
 
 ```ES6
 class Worker {
@@ -209,8 +206,8 @@ class Screen {
 }
 ```
 
-# Builder
-A mode of object construction. It can abstract the construction process of complex objects (abstract category), and different implementation methods of the abstract process can construct objects with different manifestations (attributes).
+# 建造者模式
+一种对象构建模式。它可以将复杂对象的建造过程抽象出来（抽象类别），使这个抽象过程的不同实现方法可以构造出不同表现（属性）的对象。
 
 ```ES6
 class Client {
