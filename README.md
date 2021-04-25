@@ -4,8 +4,8 @@ Let's start with the commonly used patterns.
 
 ## [简体中文](https://github.com/Jeremy-JM/design-patterns-in-es6/blob/master/readme.cn.md)
 
-
 # Factory
+
 The factory pattern is used to replace class constructors, abstracting the process of object generation so that the type of the object instantiated can be determined at run-time..
 
 ```ES6
@@ -52,13 +52,13 @@ class CurrencyFactory {
             }
             default:
                 throw new Error("There is no factory type");
-                break;
         }
     }
 }
 ```
 
 # Abstract Factory
+
 The abstract factory pattern is used to provide a client with a set of related or dependant objects. The "family" of objects created by the factory are determined at run-time.
 
 ```ES6
@@ -99,22 +99,16 @@ class MobileFactory {
     createBoard(){
         throw new Error("Method should override");
     }
-
     createScreen(){
         throw new Error("Method should override");
     }
-
     createBettary(){
         throw new Error("Method should override");
     }
-
     power(){
         this.board.powerSwitch();
     }
-
-    playGame(){
-
-    }
+    playGame(){ }
 }
 
 // -- Board --
@@ -210,6 +204,7 @@ class Screen {
 ```
 
 # Builder
+
 A mode of object construction. It can abstract the construction process of complex objects (abstract category), and different implementation methods of the abstract process can construct objects with different manifestations (attributes).
 
 ```ES6
@@ -225,15 +220,12 @@ class URLBuilder {
     constructor(domain) {
         this.url = new URL(domain);
     }
-
     setProtocol(protocol) {
         this.url.protocol = protocol;
     }
-
     addParameters(parameters) {
         this.url.parameters = parameters;
     }
-
     build() {
         let params = [];
         for (const key in this.url.parameters) {
@@ -253,6 +245,5 @@ class URL {
             this.domain = domain;
         this.parameters = null;
     }
-
 }
 ```
